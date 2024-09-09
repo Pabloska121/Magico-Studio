@@ -45,7 +45,7 @@ nav {
 }
 
 .logo img {
-    height: 40px;
+    display: block;
 }
 
 .hamburger {
