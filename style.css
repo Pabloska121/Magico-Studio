@@ -1,0 +1,375 @@
+/* Reset básico para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fondo general con degradado */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #003366, #000033);
+    color: #eaeaea;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(31, 31, 37, 0.9);
+    padding: 20px 20px; /* Aumenta el padding superior e inferior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #eaeaea;
+    transition: 0.3s;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0c674;
+}
+
+/* Contenedor principal */
+.container {
+    width: 1060px;
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 100%;
+}
+
+.container-expanded {
+    width: 1500px;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+/* Sección que ocupa toda la pantalla */
+.fullscreen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.fullscreen .main-title {
+    font-size: 5rem;
+}
+
+.fullscreen .description {
+    font-size: 2rem;
+}
+
+.fullscreen .start-button {
+    font-size: 1.5rem;
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    gap: 50px;
+    margin: 0 30px;
+}
+
+/* Sección de introducción */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 70px;
+    color: #eaeaea;
+    text-align: center;
+}
+
+.description {
+    font-size: 18px;
+    color: #bbbbbb;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.start-button {
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
+/* Sección del estudio */
+.studio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.studio-slider {
+    width: 100%;
+    max-width: 800px;
+}
+
+.studio-slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Sección de botones de contacto */
+.contact-buttons-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 50px;
+    background: rgba(58, 58, 66, 0.8);
+    border-radius: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-buttons-section a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.contact-button, .whatsapp-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button {
+    background-color: #007bff;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.whatsapp-button {
+    background-color: #5a9f45;
+}
+
+.whatsapp-button:hover {
+    background-color: #4b843a;
+    transform: translateY(-3px);
+}
+
+/* Sección de información */
+.info-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+.info-block {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(58, 58, 66, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-block h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #eaeaea;
+}
+
+.info-block p {
+    font-size: 18px;
+    color: #eaeaea;
+}
+
+.info-section a {
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+    color: #f0c674;
+}
+
+/* Sección del mapa */
+.map-section {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.map-section iframe {
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+}
+
+/* Sección de agradecimiento */
+.thanks-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.thanks-message {
+    font-size: 15px;
+    color: #eaeaea;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+@media (max-width: 750px) {
+    #intro-fullscreen .main-title {
+        font-size: 3rem; /* Ajusta el tamaño según lo que necesites */
+        
+    }
+
+    #intro-fullscreen .description {
+        font-size: 1.3rem; /* También ajusta según sea necesario */
+    }
+
+    #intro-fullscreen .start-button {
+        font-size: 1.5rem; /* Tamaño del botón para móvil */
+        padding: 10px 20px; /* Ajusta el padding del botón */
+    }
+
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    main {
+        gap: 0px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(31, 31, 37, 0.9);
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links.visible {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

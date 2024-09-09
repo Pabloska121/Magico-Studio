@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mágico Studio</title>
+    <link rel="icon" type="image/x-icon" href="./images/magico-studio-logo.png">
+    <link rel="stylesheet" href="contact.css">
+    <script src="hamburger.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="images/magico-studio-logo.png" alt="logo"></a>
+            <a href="index.html"><img src="images/magico_title.png" alt="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="services.html">Servicios</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <div class="contactForm">
+                    <form method="post" action="send-mail.php">
+                        <h2>Contáctenos</h2>
+                        <div class="inputBox">
+                            <input type="text" name="name" id="name" required>
+                            <span>Nombre</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" id="email" required>
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="message" id="message" rows="4" required></textarea>
+                            <span>Escriba su mensaje...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer">
+        <p>© 2024 Mágico Studio. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>

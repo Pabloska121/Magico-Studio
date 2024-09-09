@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(31, 31, 37, 0.9);
+    padding: 20px 20px; /* Aumenta el padding superior e inferior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 18px; /* Aumenta el tamaño del texto en la navegación */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0c674;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #003366, #000033);
+    color: #eaeaea;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Ajustar el margen superior del contenido principal para evitar superposición con la navegación fija */
+main {
+    margin-top: 100px; /* Ajusta este valor según el tamaño de tu barra de navegación */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #eaeaea;
+    transition: 0.3s;
+}
+
+/* Estilos para la sección de información */
+.info-section {
+    padding: 50px 20px; /* Ajusta el padding para el área de contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1060px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.info-block {
+    margin-bottom: 60px; /* Aumenta el margen inferior para separación */
+    display: flex;
+    background: rgba(58, 58, 66, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.info-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-text,
+.info-image {
+    padding: 0; /* Elimina el padding interior */
+    margin: 0; /* Elimina los márgenes */
+}
+
+.info-text {
+    padding: 40px; /* Ajusta el padding si es necesario */
+    font-size: 19px; /* Aumenta el tamaño del texto */
+    width: 50%; /* Asegura que ocupe el 50% del contenedor */
+}
+
+.info-text h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.info-image {
+    padding: 0; /* Elimina el padding para que ocupe todo el ancho */
+    width: 50%; /* Asegura que ocupe el 50% del contenedor */
+}
+
+.info-image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto;
+    display: block; /* Elimina espacios debajo de la imagen */
+}
+
+@media (max-width: 750px) {
+    .info-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-text {
+        padding: 10px;
+        font-size: 16px; /* Ajusta el tamaño del texto en dispositivos móviles */
+        width: auto; /* Ajusta el ancho para pantallas pequeñas */
+    }
+
+    .info-image {
+        padding: 10px;
+        width: auto; /* Ajusta el ancho para pantallas pequeñas */
+    }
+
+    .info-block.reverse {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(31, 31, 37, 0.9);
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links.visible {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+}
