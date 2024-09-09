@@ -174,14 +174,3 @@ main {
         display: flex;
     }
 }
-
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background: var(--bg-secondary);
-    padding-right: 20px;
-    box-sizing: border-box;
-    text-align: right;
-}
