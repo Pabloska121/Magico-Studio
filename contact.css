@@ -168,11 +168,15 @@ nav {
 
 @media (max-width: 750px) {
     .contact {
-        padding: 50px;
+        padding: 10px;
     }
 
     .container {
         flex-direction: column;
+    }
+
+    .contactForm h2 {
+        font-size: 2rem;
     }
     
     .nav-links {
@@ -195,15 +199,4 @@ nav {
     .hamburger {
         display: flex;
     }
-}
-
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background: var(--bg-secondary);
-    padding-right: 20px;
-    box-sizing: border-box;
-    text-align: right;
 }
