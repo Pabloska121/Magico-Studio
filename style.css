@@ -318,20 +318,9 @@ main {
     transition: opacity 0.5s ease, height 0.5s ease;
 }
 
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background: var(--bg-secondary);
-    padding-right: 20px;
-    box-sizing: border-box;
-    text-align: right;
-}
-
 @media (max-width: 750px) {
     #intro-fullscreen .main-title {
-        font-size: 3rem; /* Ajusta el tamaño según lo que necesites */
+        font-size: 2.7rem; /* Ajusta el tamaño según lo que necesites */
         
     }
 
@@ -350,6 +339,19 @@ main {
     
     main {
         gap: 0px;
+    }
+
+    .contact-buttons-section {
+        padding: 20px ;
+    }
+
+    .info-section {
+        padding: 0px;
+        margin-bottom: 70px;
+    }
+
+    .map-section {
+        padding: 0px;
     }
 
     .nav-links {
